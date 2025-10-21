@@ -3,10 +3,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
-
 # Screen
 TARGET_SCREEN_DENSITY := 400
 
@@ -26,9 +22,7 @@ $(call inherit-product, device/motorola/sm8550-common/common.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
-    ApertureResDevice \
     FrameworksResDevice \
-    LineageSystemUIDevice \
     ProductFrameworksResDevice \
     SettingsResDevice \
     SystemUIResDevice
@@ -80,12 +74,6 @@ PRODUCT_COPY_FILES += \
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-rtwo-game-perf.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-rtwo.conf
-
-# PowerShare
-PRODUCT_PACKAGES += \
-    vendor.lineage.powershare-service.default
-
-$(call soong_config_set,lineage_powershare,powershare_path,/sys/class/power_supply/wireless/device/tx_mode)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
