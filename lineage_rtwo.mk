@@ -25,3 +25,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="rtwo_g-user 15 V1TRS35H.60-33-5 7195d7-c0632 release-keys" \
     BuildFingerprint=motorola/rtwo_g/rtwo:15/V1TRS35H.60-33-5/7195d7-c0632:user/release-keys \
     DeviceProduct=rtwo_g
+
+# crdroid specifics
+TARGET_ENABLE_BLUR := true
+TARGET_SUPPORTS_QUICK_TAP := false
+TARGET_BUILD_DEVICE_AS_WEBCAM := false
+
